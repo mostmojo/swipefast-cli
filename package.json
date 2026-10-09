@@ -8,6 +8,8 @@
   "engines": { "node": ">=18" },
   "keywords": ["swipefast", "checkout", "mcp", "ai-agents", "claude", "chatgpt", "order-bump", "upsell", "cli"],
   "homepage": "https://swipefast.io/developers/mcp",
+  "repository": { "type": "git", "url": "git+https://github.com/mostmojo/swipefast-cli.git" },
+  "bugs": { "url": "https://github.com/mostmojo/swipefast-cli/issues" },
   "license": "MIT",
   "author": "Jacob Pegs (https://swipefast.io)"
 }
