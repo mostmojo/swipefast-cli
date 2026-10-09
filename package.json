@@ -1,0 +1,13 @@
+{
+  "name": "swipefast",
+  "version": "0.1.0",
+  "description": "Your Swipefast checkouts from the terminal, and a skill that teaches AI agents to build them with your approval.",
+  "type": "module",
+  "bin": { "swipefast": "bin/swipefast.mjs" },
+  "files": ["bin", "lib", "skills", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "keywords": ["swipefast", "checkout", "mcp", "ai-agents", "claude", "chatgpt", "order-bump", "upsell", "cli"],
+  "homepage": "https://swipefast.io/developers/mcp",
+  "license": "MIT",
+  "author": "Jacob Pegs (https://swipefast.io)"
+}
