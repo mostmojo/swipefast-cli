@@ -11,11 +11,15 @@ Both talk to the same [Swipefast MCP server](https://swipefast.io/developers/mcp
 
 ## Install
 
+Straight from this repo (Node 18 or newer):
+
 ```bash
-npm install -g swipefast
+npm install -g github:mostmojo/swipefast-cli
 ```
 
-Or run it without installing: `npx swipefast --help`. Node 18 or newer.
+Or run it without installing: `npx github:mostmojo/swipefast-cli --help`.
+
+The agent skill is one folder you copy: see [The agent skill](#the-agent-skill) below.
 
 ## Sign in
 
