@@ -27,7 +27,7 @@ Every CLI command is one MCP tool, and `swipefast call <tool> --args '<json>'` r
 
 ## Common jobs
 
-**Set up a checkout.** Ask in one message for anything missing: the product name, the price, and the delivery link (or that they deliver it themselves). Optionally an order bump (headline, price, link) and an upsell. Then create it all in one `setup_checkout` call and give the user the link to preview and publish.
+**Set up a checkout.** Ask in one message for anything missing: the product name, the price, and the delivery link (or that they deliver it themselves). Optionally an order bump (headline, price, link), an upsell, and payment plans (e.g. 4 weekly payments of $50, or 3 monthly payments of $70; one-time prices only). Then create it all in one `setup_checkout` call and give the user the link to preview and publish. To add or change plans later, pass `paymentPlans` to `update_checkout`.
 
 **How are sales going?** `revenue_summary`, then `list_orders` or `top_customers` for detail, and `traffic_sources` for where buyers came from. CLI: `swipefast revenue --days 30`.
 
