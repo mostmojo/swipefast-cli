@@ -35,6 +35,8 @@ Every CLI command is one MCP tool, and `swipefast call <tool> --args '<json>'` r
 
 **Add a lesson to a course.** `list_courses` for the course and module ids, then `add_lesson` with a title, Markdown text and an optional video link. A lesson for a live course waits for approval.
 
+**Email follow-up.** "Order bump buyers to sequence X, upsell buyers to Y, everyone who buys to Z" is three `add_email_rule` calls, one per `when` (`order_bump`, `upsell`, `sale`; also `refund` and `subscription_cancelled`). Call `list_email_options` first for the exact tag and sequence names in their connected email tool (Kit, Mailchimp, ActiveCampaign, beehiiv or MailerLite), and confirm the plan before adding rules, because joining a sequence can start emails to buyers. `list_email_rules` and `remove_email_rule` read and undo them.
+
 **A launch coupon.** `create_coupon` with the code, the discount and, if they gave one, an end date.
 
 ## Links

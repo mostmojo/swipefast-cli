@@ -1,6 +1,6 @@
 {
   "name": "swipefast",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Your Swipefast checkouts from the terminal, and a skill that teaches AI agents to build them with your approval.",
   "type": "module",
   "bin": { "swipefast": "bin/swipefast.mjs" },
