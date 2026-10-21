@@ -1,5 +1,7 @@
 # Swipefast CLI and agent skill
 
+[![Swipefast: your AI builds the checkout](docs/hero.jpg)](https://swipefast.io/agents)
+
 [Swipefast](https://swipefast.io) is the checkout your AI builds: a branded checkout with order bumps, one-click upsells, payment plans and courses, which Claude, ChatGPT and other AI apps can set up for you. You approve anything buyers would see.
 
 This repo has two things:
@@ -8,6 +10,8 @@ This repo has two things:
 - **A skill** that teaches AI agents (Claude Code, and any agent that reads Agent Skills) how to use Swipefast safely.
 
 Both talk to the same [Swipefast MCP server](https://swipefast.io/developers/mcp) the AI apps use. This repo is only the client; Swipefast itself is hosted at swipefast.io.
+
+**Try it with a 7-day free trial: [swipefast.io/agents](https://swipefast.io/agents)**
 
 ## Install
 
@@ -53,7 +57,8 @@ Add `--json` to any command for compact output, for scripts and agents.
 - New checkouts are **drafts** until you publish them.
 - A change to a **live** checkout doesn't happen straight away. It becomes a request on your Approvals page in Swipefast, and you get an email. Anything you approve can be rolled back.
 - `publish` only **asks**. You confirm with one tap in Swipefast.
-- Nothing here can refund, pay out or move money.
+- Nothing here can refund a buyer.
+- The two tools that move money, paying your affiliates (`create_payout_run`) and moving a subscriber to a pricier plan (`change_subscription_plan`), always wait for your approval in Swipefast, and only work with an API key. Claude, ChatGPT and other apps that connect by signing in don't get them.
 
 ## The agent skill
 
@@ -71,11 +76,11 @@ The skill works with either the MCP server (best: [connect your AI app](https://
 
 ## Connect an AI app instead
 
-Step-by-step setup for [Claude](https://swipefast.io/claude), [ChatGPT](https://swipefast.io/chatgpt), [Claude Code](https://swipefast.io/claude-code), [Cursor](https://swipefast.io/cursor), [Codex](https://swipefast.io/codex) and [Gemini](https://swipefast.io/gemini). Automations: [Zapier](https://swipefast.io/zapier), [Make](https://swipefast.io/make), [n8n](https://swipefast.io/n8n).
+Step-by-step setup for [20 AI apps](https://swipefast.io/agents), including [Claude](https://swipefast.io/claude), [ChatGPT](https://swipefast.io/chatgpt), [Claude Code](https://swipefast.io/claude-code), [Cursor](https://swipefast.io/cursor), [Codex](https://swipefast.io/codex), [Gemini](https://swipefast.io/gemini), [VS Code](https://swipefast.io/vscode), [Grok](https://swipefast.io/grok), [Manus](https://swipefast.io/manus) and [OpenClaw](https://swipefast.io/openclaw). Automations: [Zapier](https://swipefast.io/zapier), [Make](https://swipefast.io/make), [n8n](https://swipefast.io/n8n).
 
 ## Links
 
-- [Swipefast](https://swipefast.io): the checkout your AI builds, $49 a month, 0% of your sales
+- [Swipefast](https://swipefast.io): the checkout your AI builds, from $29 a month with a 7-day free trial, 0% of your sales
 - [MCP server docs](https://swipefast.io/developers/mcp)
 - [REST API](https://swipefast.io/developers/api)
 - [Status](https://swipefast.io/status)

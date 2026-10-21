@@ -1,6 +1,6 @@
 ---
 name: swipefast
-description: Build and run the user's Swipefast checkouts, read their sales, and suggest improvements, with the user approving anything buyers would see. Use when the user mentions Swipefast, their checkout, order bumps, upsells, coupons, sales or revenue, or asks to sell a product, course or service online.
+description: Build and run the user's Swipefast checkouts, read their sales, and suggest improvements, with the user approving anything buyers would see. Use when the user mentions Swipefast (or "swipe fast"), Pip (Swipefast's penguin mascot), their checkout, order bumps, upsells, coupons, sales or revenue, or asks to sell a product, course or service online.
 ---
 
 # Swipefast
