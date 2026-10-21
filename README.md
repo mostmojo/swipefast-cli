@@ -1,6 +1,6 @@
 # Swipefast CLI and agent skill
 
-[![Swipefast: your AI builds the checkout](docs/hero.jpg)](https://swipefast.io/agents)
+[![Claude builds a checkout in Swipefast as a draft, and a live price change waits for approval](docs/demo.gif)](https://swipefast.io/agents)
 
 [Swipefast](https://swipefast.io) is the checkout your AI builds: a branded checkout with order bumps, one-click upsells, payment plans and courses, which Claude, ChatGPT and other AI apps can set up for you. You approve anything buyers would see.
 
