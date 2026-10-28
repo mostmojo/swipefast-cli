@@ -55,14 +55,15 @@ Add `--json` to any command for compact output, for scripts and agents.
 ## What it can and can't do
 
 - New checkouts are **drafts** until you publish them.
-- A change to a **live** checkout doesn't happen straight away. It becomes a request on your Approvals page in Swipefast, and you get an email. Anything you approve can be rolled back.
+- On a **live** checkout, anything that touches money (a price, a delivery link, a payment plan, a new offer) doesn't happen straight away. It becomes a request on your Approvals page in Swipefast, and you get an email.
+- Wording, design, the sales page and switching or removing offers on a live checkout apply straight away. They're listed on your Approvals page too, and anything there can be rolled back.
 - `publish` only **asks**. You confirm with one tap in Swipefast.
 - Nothing here can refund a buyer.
 - The two tools that move money, paying your affiliates (`create_payout_run`) and moving a subscriber to a pricier plan (`change_subscription_plan`), always wait for your approval in Swipefast, and only work with an API key. Claude, ChatGPT and other apps that connect by signing in don't get them.
 
 ## The agent skill
 
-`skills/swipefast/SKILL.md` tells an agent when to reach for Swipefast and the rules to follow: never invent prices or links, live changes go to approvals, publishing is your decision.
+`skills/swipefast/SKILL.md` tells an agent when to reach for Swipefast and the rules to follow: never invent prices or links, money changes on a live checkout go to approvals, publishing is your decision.
 
 **Claude Code:** copy the folder into your skills.
 

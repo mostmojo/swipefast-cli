@@ -1,11 +1,11 @@
 ---
 name: swipefast
-description: Build and run the user's Swipefast checkouts, read their sales, and suggest improvements, with the user approving anything buyers would see. Use when the user mentions Swipefast (or "swipe fast"), Pip (Swipefast's penguin mascot), their checkout, order bumps, upsells, coupons, sales or revenue, or asks to sell a product, course or service online.
+description: Build and run the user's Swipefast checkouts, read their sales, and suggest improvements, with the user approving anything that touches money. Use when the user mentions Swipefast (or "swipe fast"), Pip (Swipefast's penguin mascot), their checkout, order bumps, upsells, coupons, sales or revenue, or asks to sell a product, course or service online.
 ---
 
 # Swipefast
 
-Swipefast is the user's checkout: their products, order bumps, one-click upsells, coupons, courses and sales. You can read all of it and build or change checkouts. The user stays in charge of anything buyers see.
+Swipefast is the user's checkout: their products, order bumps, one-click upsells, coupons, courses and sales. You can read all of it and build or change checkouts. The user stays in charge of the money: prices, delivery links, new offers, publishing.
 
 ## How to reach Swipefast
 
@@ -20,7 +20,8 @@ Every CLI command is one MCP tool, and `swipefast call <tool> --args '<json>'` r
 
 - **Never invent a price, a delivery link or a result.** If the user hasn't said, ask. Quote the numbers the tools return, using their formatted money, not the raw cents.
 - **New checkouts are drafts.** Changes to a draft apply straight away.
-- **Changes to a live checkout don't happen yet.** They become an approval request (`status: pending_approval`, with an `approvalUrl`). Tell the user to approve it in Swipefast, and check later with `approval_status`. Don't ask again while it's pending.
+- **On a live checkout, money waits for the user.** A price, currency, billing, delivery link, payment plan, early-bird price or campaign, a new order bump or upsell, a retention discount or pause, or a subscriber's plan change becomes an approval request (`status: pending_approval`, with an `approvalUrl`). Tell the user to approve it in Swipefast, and check later with `approval_status`. Don't ask again while it's pending.
+- **Everything else on a live checkout applies straight away** (`status: applied`): the sales page, wording and design, switching or removing an offer, the order of the offers after payment, a lesson in a live course. Tell the user what changed. It's listed on their Approvals page, where they can roll it back; there's nothing for them to approve. Send wording and price changes in separate calls, so the wording doesn't wait on the price.
 - **Publishing is the user's decision.** `publish_checkout` only asks. The user confirms it with one tap in Swipefast, and a yes in this chat is not their approval. Say so plainly.
 - **You can't refund, pay out or move money.** Those stay with the user in the dashboard.
 - **Errors come back as `{code, message, hint}`.** Follow the hint.
@@ -33,9 +34,9 @@ Every CLI command is one MCP tool, and `swipefast call <tool> --args '<json>'` r
 
 **Improve a checkout.** Read it with `get_product` and its numbers with `offer_stats`. If the user has performance rules, start with `list_findings`. Propose one change at a time, with the reason from the numbers, and make it with `update_checkout`, `update_order_bump` or `update_upsell`. Mark the finding done with `resolve_finding`.
 
-**Add a lesson to a course.** `list_courses` for the course and module ids, then `add_lesson` with a title, Markdown text and an optional video link. A lesson for a live course waits for approval.
+**Add a lesson to a course.** `list_courses` for the course and module ids, then `add_lesson` with a title, Markdown text and an optional video link. A lesson for a live course goes live straight away, and the user can roll it back.
 
-**Email follow-up.** "Order bump buyers to sequence X, upsell buyers to Y, everyone who buys to Z" is three `add_email_rule` calls, one per `when` (`order_bump`, `upsell`, `sale`; also `refund` and `subscription_cancelled`). Call `list_email_options` first for the exact tag and sequence names in their connected email tool (Kit, Mailchimp, ActiveCampaign, beehiiv or MailerLite), and confirm the plan before adding rules, because joining a sequence can start emails to buyers. `list_email_rules` and `remove_email_rule` read and undo them.
+**Email follow-up.** "Order bump buyers to sequence X, upsell buyers to Y, everyone who buys to Z" is three `add_email_rule` calls, one per `when` (`order_bump`, `upsell`, `sale`; also `refund` and `subscription_cancelled`). Call `list_email_options` first for the exact tag and sequence names in their connected email tool (Kit, Mailchimp, ActiveCampaign, beehiiv, MailerLite, Kajabi or HighLevel), and confirm the plan before adding rules, because joining a sequence can start emails to buyers. `list_email_rules` and `remove_email_rule` read and undo them.
 
 **A launch coupon.** `create_coupon` with the code, the discount and, if they gave one, an end date.
 

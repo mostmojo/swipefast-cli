@@ -2,13 +2,13 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.mostmojo/swipefast",
   "title": "Swipefast",
-  "description": "The checkout your AI builds: checkouts, order bumps and upsells, with live changes you approve.",
+  "description": "The checkout your AI builds: checkouts, order bumps and upsells, with money changes you approve.",
   "repository": {
     "url": "https://github.com/mostmojo/swipefast-cli",
     "source": "github"
   },
   "websiteUrl": "https://swipefast.io/agents",
-  "version": "1.22.3",
+  "version": "1.27.0",
   "remotes": [
     {
       "type": "streamable-http",
