@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "swipefast": {
+      "type": "http",
+      "url": "https://swipefast.io/api/mcp"
+    }
+  }
+}

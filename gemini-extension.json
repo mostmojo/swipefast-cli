@@ -1,0 +1,11 @@
+{
+  "name": "swipefast",
+  "version": "0.2.2",
+  "description": "The checkout your AI builds: checkouts, order bumps and upsells, with money changes you approve.",
+  "contextFileName": "skills/swipefast/SKILL.md",
+  "mcpServers": {
+    "swipefast": {
+      "httpUrl": "https://swipefast.io/api/mcp"
+    }
+  }
+}

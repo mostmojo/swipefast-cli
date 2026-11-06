@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "Swipefast",
+  "version": "0.2.2",
+  "description": "The checkout your AI builds: checkouts, order bumps and upsells, with money changes you approve.",
+  "author": {
+    "name": "Jacob Pegs",
+    "url": "https://swipefast.io"
+  },
+  "homepage": "https://swipefast.io/developers/mcp",
+  "repository": "https://github.com/mostmojo/swipefast-cli",
+  "license": "MIT",
+  "keywords": ["swipefast", "checkout", "payments", "mcp", "ai-agents", "order-bump", "upsell"]
+}
