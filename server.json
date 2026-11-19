@@ -8,7 +8,23 @@
     "source": "github"
   },
   "websiteUrl": "https://swipefast.io/agents",
-  "version": "1.33.0",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/mostmojo/swipefast-cli/main/assets/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    },
+    {
+      "src": "https://swipefast.io/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "version": "1.36.0",
   "remotes": [
     {
       "type": "streamable-http",
